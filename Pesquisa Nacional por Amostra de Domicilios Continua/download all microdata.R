@@ -4,7 +4,7 @@
 # # # # # # # # # # # # # # # # #
 # # block of code to run this # #
 # # # # # # # # # # # # # # # # #
-# options( encoding = "windows-1252" )		# # only macintosh and *nix users need this line
+options( encoding = "windows-1252" )		# # only macintosh and *nix users need this line
 # library(downloader)
 # setwd( "C:/My Directory/PNADC/" )
 # source_url( "https://raw.githubusercontent.com/ajdamico/asdfree/master/Pesquisa%20Nacional%20por%20Amostra%20de%20Domicilios%20Continua/download%20all%20microdata.R" , prompt = FALSE , echo = TRUE )
@@ -125,7 +125,7 @@ for ( i in seq_along( zip.filenames ) ){
 	# if the year is 2012-2014 or 2015Q1-Q3, use the first sas import file..
 	if( year < 2015 | quarter < 4 ) {
 	
-		sasfile <- grep( "1Tri_2012 a 3Tri_2015" , sasfiles , value = TRUE ) 
+		sasfile <- grep( "1Tri_2012 a 3Tri_2015" , sasfiles , value = FALSE ) 
 	
 	# otherwise, use the second
 	} else {
